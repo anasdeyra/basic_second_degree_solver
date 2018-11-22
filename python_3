@@ -1,0 +1,21 @@
+def second_degree(a, b, c):
+    import math
+    delta = (b**2) - (4 * a * c)
+    sd = math.sqrt(delta)
+    print('delta= ', delta, 'so its sqrt is: ', sd)
+    #We gonna search for x_prime and x_second
+    #First case delta = 0
+    if delta == 0:
+        x = - b / 2 * a
+        print(x)
+    #second case delta > 0
+    if delta > 0:
+        x_prime = -(b + sd) / (2 * a)
+        print('-(b + delta)=', -(b + sd), ' and 2 * a=', 2 * a)
+        x_second = -(b - sd) / (2 * a)
+        print('-(b - delta)=', -(b - sd), ' and 2 * a=', 2 * a)
+        print('Sr={', x_prime, ', ', x_second, '}')
+    #Third case delta <0
+    if delta < 0:
+        print('IMPOSSIBLE(at least for now)')
+second_degree(-2, 7 , -3)
